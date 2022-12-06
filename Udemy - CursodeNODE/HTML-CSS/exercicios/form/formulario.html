@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+    <h1> Formulário </h1>
+    <hr>
+    </header>
+    <nav>
+        <form action="http://localhost:5050/usuarios" method="POST">
+            
+            <div class="MainInformation">
+            <input type="emial" name="Email" placeholder="DigiteSeuEmail">
+            <input type="text" name="Nome" placeholder="DigiteSeuNome">
+            <input type="password" name="Senha" placeholder="DigiteSuaSenha">
+            <textarea name="bio" cols="21" rows="2"> </textarea>
+            </div>
+
+            <div id="selector">
+                <input type="radio" name="tipo" value="Admin"> Admin
+                <input type="radio" name="tipo" value="Regular"> Regular
+            </div>
+
+            <select name="estado">
+                <option value="AC"> Acre</option>
+                <option value="SP"> SãoPaulo</option>
+                <option value="Ce"> Ceará</option>
+            </select>
+
+            <select name="interesses" multiple size="3">
+                <option value="js">Js</option>
+                <option value="Python">Python</option>
+                <option value="Go">GO </option>
+            </select>
+
+            <button> Incluir </button>
+        </form>
+    </nav>
+    <hr>
+</body>
+</html>

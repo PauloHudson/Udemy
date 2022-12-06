@@ -1,0 +1,18 @@
+body{
+    background-color: gray;
+}
+
+.bordax{
+    font-size: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font: bold;
+    text-transform: uppercase;
+}
+
+.gradiente{
+    height: 300px;
+    width:100%;
+    background-image: linear-gradient(to bottom, white, pink;
+}

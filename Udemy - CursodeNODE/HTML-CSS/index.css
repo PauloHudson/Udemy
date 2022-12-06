@@ -1,0 +1,49 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(241, 241, 241);
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+
+}
+
+hr{
+    border: none;
+    border-radius: 30px;
+    height: 6px;
+    background: black;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+nav{
+    text-align: center;
+}
+
+.conteudos{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    margin-left: 18px;
+    font-size: 20px;
+    height: 100%;
+    width: 300px;
+    margin-top: 1em; 
+    margin-bottom: 1em;
+}
+.conteudos:hover{
+    background-color: rgb(184, 184, 184);
+    border-radius: 20px;
+}
+
+h2{
+    margin-top: 6em;
+    text-align: center;
+    font-size: 50px;
+
+}

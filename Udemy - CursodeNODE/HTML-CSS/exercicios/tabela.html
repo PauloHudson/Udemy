@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table{
+            border-collapse: collapse;
+
+        }
+        th, td{
+            padding: 10px;
+
+        }
+        thead tr{
+            border-bottom: solid 3px gray;
+        }
+        tbody tr:hover{
+            border-radius: 10px;
+            background-color: rgb(206, 206, 206);
+        }
+        tfoot{
+            background-color: darkgray;
+            color: white
+        }
+    </style>
+    <title>Tabelas</title>
+</head>
+<body>
+    <footer> 
+        <h1> Tabelas</h1>
+    </footer>
+
+    <section>
+        <table>
+            <caption style="font-weight: bold; font-size: 20px"> Produtos  </caption>
+                <thead>
+                    <tr>
+                        <th> Produtos</th>
+                        <th> Preço </th>
+                        <th> Quantidade </th>
+                        <th> Total </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> iPad </td>
+                        <td> 2999 </td>
+                        <td> 5 </td>
+                        <td> 15000</td>
+                    </tr>
+                    <tr>
+                        <td> Iphone 15</td>
+                        <td> 404000</td>
+                        <td> 10 </td>
+                        <td> 9999999</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"> total</td>
+                        <td> Infinito </td>
+                    </tr>
+                </tfoot>
+                    
+        </table>
+    </section>
+
+</body>
+</html>

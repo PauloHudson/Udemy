@@ -1,0 +1,22 @@
+h1{
+    height: 400px;
+    position: relative;
+}
+
+
+h1 span, h1 span2{
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    font-size: 100px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+    
+}
+
+h1 span2{
+    top: 110%;
+}
