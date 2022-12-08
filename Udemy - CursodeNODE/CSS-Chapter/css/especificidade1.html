@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* 1. regra com !important
+        2. seletroes mai especificos
+        3. ultima regra processada(empate)
+        4. */
+
+        p{
+            background-color: gray;
+        }
+
+        /* class é mais expecifica que a de elemento(p) então há preferência */
+        .observacao{
+            text-align: center;
+            background-color: blue;
+            border: dashed 5px;
+            padding: 20px;
+        }
+
+        p.observacao{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 10px;
+            background: linear-gradient(to right, red, yellow);
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
