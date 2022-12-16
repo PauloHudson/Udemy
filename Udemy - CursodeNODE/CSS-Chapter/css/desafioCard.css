@@ -1,0 +1,52 @@
+
+body{
+    font-family: Verdana,sans-serif;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.div{
+    display: inline;
+}
+.curso{
+    height: 280px;
+    vertical-align: top;
+    box-shadow: 4px 2px 10px 3px rgba(202, 200, 200, 0.77);
+    border: 1px rgb(189, 189, 189) solid;
+    margin-left: 24px;
+    width: 260px;
+    display: inline-block;
+    padding: 4px;
+    padding: 5px 5px 20px 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.curso img{
+    max-height: 50%;
+    width: 100%;
+}
+.curso-info{
+    height: 90px;
+    overflow: hidden;
+    padding: 10px;
+}
+h4{
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+.curso-preco{
+    padding: 10px;
+    float: right;
+}
+.preco-de{
+    font-weight: bold;
+    color:rgb(209, 4, 4);
+    text-decoration: line-through;
+}
+
+.preco-por{
+    color: green;
+    font-weight: bold;
+    font-size: 24px;
+}

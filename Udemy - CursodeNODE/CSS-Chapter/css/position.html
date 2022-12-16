@@ -5,7 +5,44 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: 3px solid black;
+        }
+        /*top right, left não são consideradas na position static*/
+        .static{
+            top: 100px; 
+            left: 100px;
+            background-color: aqua;
+        }
+        /*elemento se mantem fixo, não leva em consideração o elemento anteriro*/
+        .fixed{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            background-color: aquamarine;
+        }
+        /*leva sem consideração o elemento anterior, para se posicionar*/
+        .relative1{
+            position: relative;
+            left: 40px;
+            bottom: 2px;
+            color: wheat;
+            background-color: black;
+        }
+
+        /*vai se posicionar também ocmo o fixed, em relação a pagina, não em relação ao elemento anterior/posterior.*/
+        .absolute1{
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: blue;
+
+        }
+        .relativ2{
+            position: relative;
+        }
     </style>
 </head>
 

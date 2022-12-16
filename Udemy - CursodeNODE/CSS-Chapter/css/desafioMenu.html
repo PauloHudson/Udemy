@@ -6,11 +6,7 @@
     <title>Desafio Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        /* ... */
-    </style>
-</head>
-
+    <link rel="stylesheet" href="desafioMenu.css">
 <body>
     <header class="cabecalho">
         <div class="logo">
@@ -39,12 +35,19 @@
         </nav>
         <aside class="autenticacao">
             <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
+            <a href="#registar" class="botao">Registrar</a>
         </aside>
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(e) {
+            const oldUrl = e.oldUrl.split('#')[1]
+            const newUrl = e.newUrl.split('#')[1]
+            const oldMenu = document.querySelector(`.menu a[href ='#${oldUrl}'] `)
+            const newMenu = document.querySelector(`.menu a[href ='#${newUrl}'] `)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
     </script>
 </body>
 

@@ -12,6 +12,20 @@
             border: solid 5px;
             display: none;
         }
+
+        /*colocamos um altura máxima e minima para aparecer os conteudosss... */
+        @media (max-width: 600px) {
+            .muito-pequeno { display: block}
+        }
+        /* esse aqui seria um ou.. ou é no máximo 1000px ou é portrait*/
+        @media (max-width: 1000px), (orientation :portrait){
+            .pequeno-retrato {display: block;}
+        }
+
+        /*esse aqui é um e, que ser maior que 502 e menor que 1000*/ 
+        @media (min-width: 502px) and (max-width: 1000px){
+            .intervalo {display:block}
+        }
     </style>
 </head>
 <body>
