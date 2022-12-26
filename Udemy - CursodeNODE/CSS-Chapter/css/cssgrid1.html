@@ -22,6 +22,49 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+        body{
+            /* flexbox uni dimensonal */
+            /* bidimensional */
+            display: grid;
+            /* colocamos duas colunas */
+            grid-template-columns: 50% 50%;
+            /* defininmos a quantidade de colunas, divindo o espaço total pela quantidade de colunas desejadas. */
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33% );
+            grid-template-columns: repeat(2, 100px) 100px;
+            /* min-max no mínimo 100px e nomáximo 300 por exemplo... */
+
+            /* nesse exemplo */
+            /* definimos que queremos 3 colunas */
+            /* a primeira vai ocupar 200px fixos */
+            /* a segunda vai ocupar 20% da tela valor relativo*/
+            /* a terceira vai ocupar um fragmento, que significa que ele vai pegar todo o resto restante... */
+            grid-template-columns: 200px 20% 1fr;
+
+            /*podemos também trocar os tamanhos das linhasss... cada "" significa uma linha.  */
+            grid-template-rows: 40% 20% 10% 1fr;
+            grid-template-rows: auto;
+        }
+        .d8{
+            /* aqui falamos que iniciará na linha 2 */
+            grid-column-start: 2 ;
+            /* aqui falamos ele ocupará também a linha 4
+            ou seja as duas linhas. a dele e a 4. */
+            grid-column-end: 4;
+            /* igulamente poderiamos usar o span para falar que queremos que oculpe duas linhas */
+            grid-column-end: span 2;
+            /* começara na linha 3, e irá atá a linha 5 */
+            grid-row-start: 3;
+            grid-row-end: span 2;
+
+        }
+        .d10, .d11{
+            /* podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
     </style>
 </head>
 

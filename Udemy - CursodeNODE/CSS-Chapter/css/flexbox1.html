@@ -6,7 +6,62 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div{
+            border: solid 5px dodberblue;
+            font-size: 30px;
+            margin: 5px;
+
+        }
+        .big{
+            font-size: 1.5em;
+        }
+        .flex-container{
+            display:flex;
+            /* flex-direction: column;     deixa em forma de coluna na vertical*/
+            flex-direction: row;
+            /*fica em forma de linha horizontal*/
+            /*podemos também mudar a ordem de direita/esquerda ... esquerda/direita*/
+            /*flex-direction: column-reverse;*/
+            width: 50%;
+            /*essa propriedade respeitaria a largura
+            e quebraria a linha para baixo*/
+            flex-wrap: wrap;
+
+            justify-content: flex-start;
+
+
+            /* flex-end joga os últimos elemnetos para o final > direita*/
+            justify-content: flex-end;
+            
+            /* isso aqui irá centralizar os flex-items... */
+            justify-content: center;
+            /* colcoar espaços entre os elementos para  melhor destribuição */
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            /* esse aqui coloca um espaço entre os elementos.... */
+            justify-content: space-between;
+
+            /* cROSS AXIS */
+            height: 300PX;
+            /* alinha os items pelo tamanho base da fonte. */
+            align-items: baseline;
+            /* alinhar os items pelo final.. */
+            align-items: flex-end;
+            align-items: center;
+
+
+            /* align content */  /* mais de uma linha ele funciona */
+            /* vai para o começo do conteudo(box) */
+            align-content: flex-start;
+            /* vai para o final do conteudo(box) */
+            align-content: flex-end;
+            /* alinha no centro do conteudo. */
+            align-content: center;
+            /* espamento entre eles do extremo norte a oextremo sul */
+            align-content: space-between;
+
+            
+        }
     </style>
 </head>
 

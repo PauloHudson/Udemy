@@ -6,12 +6,53 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+       div{
+        border: solid 5px dodgerblue;
+        font-size: 40px;
+       }
+       .flex-container div{
+        box-sizing: border-box;
+       }
+       .flex-container{
+        display: flex;
+        height: 300px;
+        width: 500px;
+       }
+       .flex-container div:nth-child(3){
+        background-color: aqua;
+        order: 1 ;
+        /* ordem maior o elemento é mostrado por último */
+        /* orem negativa o elemento é mostrado primeiro */
+        align-self: center;
+        /* alinhar centro */
+        align-items: flex-end;
+        /* alinha fim e começo */
+        align-self: stretch;
+        /* volta ao padrão  */
+
+       }
+       .flex-container div{
+        width: 100px;
+        /* faz com que os elementos crescam de maneira linear. porém podemos colocar peso em determinados elemento, para que na divisão ele receba uma maior parecela do espaço em branco
+         */
+        flex-grow: 1;
+       }
+       .flex-container div:nth-child(1){
+        flex-grow: 2;
+       }
+       .flex-container{
+        width: 300px;
+        flex-shrink: 1;
+       }
+       .flex-container div:nth-child(1){
+        /* da mesma forma que podemos colocar a mais esse espaço, podemos colocar a menos, definindo um peso menor para o elemento. */
+        flex-shrink: 5;
+       }    
     </style>
 </head>
 
 <body>
-    <div class="flex-container tag nolabel">
+    <div class="flex-container ">
         <div class="tag nolabel">1</div>
         <div class="tag nolabel">2</div>
         <div class="tag nolabel">3</div>

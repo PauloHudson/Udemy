@@ -51,9 +51,28 @@
             background: #f50a31;
             color: #fff;
         }
-        /* ==================== */
-        /* Solução com Flex Box */
-        /* ==================== */
+        .cabecalho{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+
+        }
+        .menu{
+            flex-grow: 10;
+            justify-content: left;
+        }
+        .menu ul{
+            display: flex;
+            
+        }
+        @media (max-width: 820px){
+            .autenticacao {display: none;};
+        }
+        @media (max-width: 590px){
+            .button{display: block;}
+            .menu {display: none;};
+        }
+       
     </style>
 </head>
 
@@ -64,6 +83,7 @@
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
+     
         <nav class="menu">
             <ul>
                 <li>
