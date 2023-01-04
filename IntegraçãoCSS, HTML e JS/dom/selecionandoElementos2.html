@@ -9,8 +9,20 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <script> 
+    //getElementById -> espera receber um Id, Não precisa do #
+    //query. espera receber um seletor css, preciamos colocar o #     
+    //mesmo que passemos vários objs, ele só vai retornar o primeiro...        
+        document.querySelector('#primeiro').classList.add('destaque')
+        const selecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        const tirar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+        selecionar('.terceiro.ultimo')
+        //lembrar que precisamos passar a referência de class e id #, .
+        tirar('*')
+        selecionar(':nth-child(1)')
+        selecionar('[wb-attrib]')
     </script>
 </body>
 </html>

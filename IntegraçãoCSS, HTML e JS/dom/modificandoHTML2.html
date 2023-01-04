@@ -12,8 +12,23 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const body = document.querySelector('body')
+        const div = document.querySelector('div')
+        div.insertAdjacentHTML('beforebegin', '<p> Before Beginning </p>')
+        div.innerHTML = 'texto Alterado'
+
+        const div2 = document.createElement('div')
+        div2.classList.add('red')
+        div2.innerHTML = 'SegundaDIV'
+        body.appendChild(div2)
     </script>
 </body>
-
+<style>
+    .red{
+        border-radius: 20px;
+        border: 2px white ;
+        background-color: red;
+        display: inline;
+    }
+</style>
 </html>

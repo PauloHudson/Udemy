@@ -9,7 +9,49 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        //crie uma const para conter o body...
+       const body = document.querySelector('body')
+       //ciamos um elemento no caso um div
+       const div1 = document.createElement('div')
+       //div colocamos a classe destaque na div criada
+       div1.classList.add('destaque')
+       //e agora colocaremos um elemento dentro dessa Div
+       div1.innerHTML = 'Primeiro'
+
+
+       //criamos elemento div
+       const div2 = document.createElement('div')
+       //setamos os atributos
+       div2.setAttribute('wm-atributo', 'valor')
+       //e o valor da div.
+       div2.innerHTML = 'segundo'
+
+       const p = document.createElement('p')
+       p.innerHTML = 'terceiro'
+       const div3 = document.createElement('div')
+       //vai adicionaro o filho(p) ao pai div3...
+       div3.appendChild(p)
+
+
+
+       //finalmente para adicionar realmente
+       body.appendChild(div1)
+       body.appendChild(div2)
+        body.appendChild(div3)
+
+        //criamo um var, e não preicamo usar o createElement
+        //depois usa um InnerHTml
+        //já vai direto = texto é a var... createText é o tipo.... 'antes' o conteúdo
+        const texto = document.createTextNode('antes....')
+        div3.insertBefore(texto, div3.childNodes[0])
+
+
+        //criar um Clone
+        //clonamos a div3 na div4
+        const div4 = div3.cloneNode(true)   
+        body.appendChild(div4)
+        //remover a child no caso "antes"
+        //body.removeChild(div3)
     </script>
 </body>
 

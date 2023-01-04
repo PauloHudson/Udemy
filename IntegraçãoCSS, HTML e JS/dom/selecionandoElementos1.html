@@ -10,7 +10,16 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        document.getElementById('primeiro').classList.add('destaque')
+       const divs = document.getElementsByTagName('div')
+       
+       const divsArray = [...divs]
+       divsArray.forEach(e => e.classList.add('destaque'))
+       
+       const ultimoElemenot = document.getElementsByClassName('ultimo')
+       for(let e of ultimoElemenot){
+        e.classList.remove('destaque')
+       }
     </script>
 </body>
 </html>
