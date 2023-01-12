@@ -18,9 +18,13 @@ const antes2 = cb => {
     return cb()
 }
 
-
+//função que pegou arquivos da PastaA e os copiou, criou uma novoa Pasta = PastaB e os colocou lá.
 function copiar(cb){
-    console.log('Tarefa de Copiar')
+    //definimos os arquivos de entrada.
+    gulp.src(['pastaA/arquivo1.txt' , 'pastaA/arquivo2.txt'])
+    //podemos copiar qualquer arquivo txt, sem necessariamente descrevermos qual e copiar automáticamente.
+    gulp.src('pastaA/**/*.txt')
+        .pipe(gulp.dest('pastaB'))
     return cb()
 }
 const Fim = cb => {
