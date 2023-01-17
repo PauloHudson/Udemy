@@ -5,14 +5,15 @@ const sass = require('gulp-sass')(require('sass'))
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
+const { src } = require('gulp')
 
-function appHtml(cb){
+function appHtml(){
     return gulp.src('src/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('build'))
 }
 
-function appCSS(cb){
+function appCSS(){
     return gulp.src('src/assets/sass/index.scss')
         .pipe(sass().on('error', sass.logError))
         //uglyfi deixa tudo em uma linha
@@ -24,11 +25,17 @@ function appCSS(cb){
 }
 
 function appJS(cb){
-    return cb()
+    return gulp.src('src/assets/js/**/*.js')
+        .pipe(babel({presets: ['ENV']}))
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('build/assets/js'))
+
 }
 
-function appIMG(cb){
-    return cb()
+function appIMG(){
+    return gulp.src('src/assets/imgs/**/*.*')
+    .pipe(gulp.dest('build/assets/img'))
 }
 
 module.exports = {
