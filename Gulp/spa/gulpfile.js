@@ -7,8 +7,12 @@ const { monitorarArquivos, servidor } = require('./gulpTasks/servidor')
  
 
 //exportando as nossas funções. 
+//ao mesmo tempo que vai processar o html da aplicação vai processar o css das dependências e etc...
 module.exports.default = series(
     parallel(
-        series
-    )
+        series(appHtml, appCSS, appJS, appIMG)
+        series(depsCSS, depsFonts)
+    ),
+    servidor,
+    monitorarArquivos
 )
