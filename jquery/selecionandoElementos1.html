@@ -49,6 +49,31 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque').removeClass('destaque')
+        $('[wm-obrigatorio]').addClass('destaque')
+
+        //exclusivo Jquery
+        //pegou o primeiro elemento do tipo LI- e daí aplicou os elementos."parametros"
+        $('li:first').css('border', 'solid 10px white')
+        //pegar todos os impares
+        $('li:odd').css('border', 'solid 10px orange')
+        //maiores que alguem elemento (vai aplicar a borda em todos os elementos que o seu indice seja maior do que 1: no caso o 2 eo 3.)...
+        $('li:gt(1)').css('border', '10px solid black')
+        //se contem uma letra por exemplo (no caso todos que tivsse r na letra seria adicionado o background color black.)
+        $('li:contains("r")').css('background-color', 'black')
+
+        //formulario
+
+        //retirou todos os lementos do form
+        $('form *').hide()
+        //mostrar os elementos um por um 
+        $('form :text').show()
+        $('form :password').show()
+        $('form :radio').show()
+        $('form :checkbox').show()
+        $('form :file').show()
+
+        
     </script>
 </body>
