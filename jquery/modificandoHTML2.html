@@ -17,6 +17,32 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+
+        //cria o h1 antes da div2
+        //poderiamos usar o after também - DEPOIS
+        $('#div2').before('<h1> olá </h1>')
+        //mesma coisa porém mudamos a ordem... colocamos primeiro oq sera colocado depois onde.
+        $('<h1> olá </h1>').insertAfter('#div1')
+
+        //cria uma div com os elementos
+        $('p.numero').wrap('<div>')
+
+        //esse vai envolver e criar uma único div.....
+        $('p.numero').wrapAll('<div id="div4">')
+
+        //remover conteudo
+        $('#div4').empty()
+
+        //substituir conteudos apartir de um.
+        //vai substituir todos os p dentro de body pela div substituto
+        //$('<div> Substituto </div>').replaceAll('body > p')
+
+        //ou usar o replace with que tem a mesma arquitetura de pssar primeiro o seletor depois o conteudo
+        //ou seja todos que estiverem em body e forem h1 vao ser substitutiso por essa div.
+        $('body > h1').replaceWith('<div> Substituto </div>')
+
     </script>
 </body>
