@@ -81,6 +81,25 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        //consegue receber objetos...
+        const comBorda = {'border': 'solid 8px orange'}
+        const semborda = {'border': 'none'}
+
+        //selecionar o pai... apartid do .parent
+        $('a[href="#link3"]').parent().css(semborda)
+        //o ultimo elemento -- dai selecionamos o anterior a ele (o que no caso seria o antecessor...)....
+        $('li:last').prev().css(comBorda).css(semborda)
+        //seria o próximo pai depois do paid o hrefLink3
+        $('a[href="#link3"]').parent().next().css(comBorda)
+        //todos os pais....
+        $('a[href="#link1"]').parents().css(comBorda).css(semborda)
+        //vai selecionar todos menos o que colocarmos
+        $('a[href="#link1"]').parentsUntil($('body')).css(comBorda).css(semborda)
+        //pegar todos os filhos...
+        $('main').children().css(comBorda)
+
+        const elementoDom = document.getElementsByClassName('menu')
+        $(elementoDom).css(comBorda)
+
     </script>
 </body>

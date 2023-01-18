@@ -15,6 +15,37 @@
     <div id='conteudo3'></div>
 
     <script>
-        // ...
+        // conteudo1
+        //colocar conteudo em uma div.
+        $('#conteudo1').append('<p> HELLO WORLD</p>')
+
+        // criamos um array com li.... e adicionamos a esse li as chaves arroz e carne
+        const elementos = [
+            $('<li></li>').append('arroz'),
+            $('<li>').append('carne')
+        ]
+            //apos isso criamos mais uma variavel com uma ul e já com uma li, e por fim adicionamos aquele array (elementos) a esse ul
+        const lista = $('<ul> <li> olá </li> </ul>').append(elementos)
+        //adicionar tudo isso a div
+        $('#conteudo2').append(lista)
+
+        //conteudo3
+        $('#conteudo3').append('<h1> 1 </h1>', '<h1> 2 </h1>')
+                .prepend('<h1> 0 </h1>')
+                //prepend coloca antes do 1 e do 2
+
+                //html vai substituir os elemenso anteriores
+        $('#conteudo3').html('<h1> 123 </h1>')
+            
+        //vai realmente auterar o conteudo da div.
+        $('#conteudo3').text('<h1> 2323 </h1>')
+        
+
+        //criar um função
+        $.fn.Trocarfundo = function(){
+            this.css('background-color', 'black')
+            return this
+        }
+        $('body').fadeOut(3000).Trocarfundo().show(2000)
     </script>
 </body>
