@@ -14,6 +14,16 @@
     <div>2</div>
 
     <script>
-        // ...
+        $('div').hide(1000).show(2000).fadeOut(3000)
+        console.log($('div').get(0))
+        console.log(jQuery.inArray(3))
+        
+    //ciar uma função com jQuery.
+    $.fn.FundoAzul = function(){
+        this.css('background-color', 'blue')
+        return this
+    }
+
+    $('div').FundoAzul().fadeOut(2000).show(3000)
     </script>
 </body>
