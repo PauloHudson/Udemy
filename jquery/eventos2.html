@@ -21,6 +21,27 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alterarDestaque = () => $('#div1').toggleClass('destaque')
+        //ou poderiamos usar o one
+        $('#div1').on('mouseenter mouseleve', alterarDestaque)
+       // $('#div1').hover(alterarDestaque, e => {})
+
+       //função one uma unica vez
+       //$('#div1').one('mouseenter', e => alert('AvisoImportante'))
+
+       //sumir e voltar dom double click
+       $('#div1').dblclick(e => $('#div1').fadeOut(100).fadeIn(10000))
+
+    //função que mostar largura e altura
+    //referenciamos o obj global windoww
+    //daí setamos as variáveis l e w a altura e largura
+    //em seguída demos um html na div resultado com uma template string.
+       $(window).resize(function(e){
+        const l = $(window).width()
+        const w = $(window).height()
+        $('#resultado1').html(`Largura ${l} Altura ${w} `)
+
+       })
+
     </script>
 </body>
