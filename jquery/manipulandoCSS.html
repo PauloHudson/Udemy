@@ -15,6 +15,20 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        //estamos lendo o valor de uma variável.
+        const fonte = $('#div1').css('font-family')
+        //append serve para adicionar ao valor da váriavel....
+        $('#resultado').append(`A fonte é ${fonte}`)
+        //alterar diretamente a div apartir de obj
+        $('#div1').css({'font-size': '10em', 'color': 'black'})
+        //adicionar uma class css
+        $('#div2').addClass('destaque')
+
+        //saber se um resultado é true a dar um append a t var
+        const temClasse = $('#div2').hasClass('destaque')
+        $('#resultado').append(`<br> Tem Class? ${temClasse}`)
+
+        //remover uma class
+        $('#div3').removeClass('destaque')
     </script>
 </body>
