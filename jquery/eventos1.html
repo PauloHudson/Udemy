@@ -20,6 +20,32 @@
     <input type="text" placeholder="Cor de Background">
 
     <script>
-        // ...
+        //função que atualiza a posição passando o envento de mouse, assim ele mostar a posição do nosso cursor.
+        function MostrarPosicaoMouse(e){
+            $("#posicao").html(`x : ${e.clientX} y: ${e.clientY} `)
+        }
+        //on registra um evento...
+        $('body').on('mousemove', MostrarPosicaoMouse)
+
+        //função de clique
+        let clique = 0
+        $('body').click(e => {
+            //tem de ser html e não append, pq o append iria adicioando apenas, o html vai substituindo.
+            $('#cliques').html(`${++clique}`)
+        })
+        
+        //função que altera a cor do background passando uma #color, capturando evento de teclado.
+
+        //armazenamos a cor de backgorund original a essa variável...        
+        const backgroundOriginal = $('body').css('background-color')
+
+        $('input').keyup(function (e){
+            const valor = $(this).val()
+            if(valor.match(/#[\da-fA-F]{6}/)){
+                $('body').css('background-color', valor)
+            }else{
+                $('body').cass('background-color', backgroundOriginal)
+            }
+        })
     </script>
 </body>
