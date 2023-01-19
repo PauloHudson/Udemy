@@ -28,6 +28,27 @@
     <div>Animar!</div>
 
     <script>
-        // ...
+        function alterarLargura(valor, duracao, callback){
+            $('div').animate({width: `+=${valor}`}, duracao, callback)
+        }
+       function moverDiganoal(valor, duracao, callback){
+            $('div').animate({top: `+=${valor}`, left: `+=${valor}`}, duracao, callback)
+       }
+       function girar(valor, duracao, callback){
+         $('div').animate({transform: `+=${valor}`},{
+            step: function (valor){
+                $(this).css('transform', `rotate(${valor}deg)`)
+            },
+            duration: duracao
+         }, 'linear', callback)
+       }
+       //por isso a tal da callback, quanto acontecer a função alterar largura, aí sim ela vai ser desparada.
+       alterarLargura(300, 1000, () =>{
+            alterarLargura(-300, 'slow', () =>{
+                moverDiganoal(300, 500, ()=>{
+                    girar(3300, 3000)
+                })
+            })
+       })
     </script>
 </body>

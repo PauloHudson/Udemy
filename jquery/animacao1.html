@@ -22,7 +22,17 @@
     <button>Iniciar</button>
     <div id='animar'>Animar!</div>
 
-    <script>        
-        // ...
+    <script>      
+
+        $('button').click(e => {
+            const t = 1400
+            //$('#animar').hide(t).show(t)
+            //se eles estiver exibido ele vai esconder, e visse versa
+            //$('#animar').toggle(t)
+            //desaparecer e sumir
+            //$('#animar').fadeOut(t).fadeIn(t)
+            //animação de slide...
+            //$('#animar').slideUp(t).slideDown(t)
+        })
     </script>
 </body>
