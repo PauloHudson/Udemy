@@ -16,13 +16,16 @@ import Saudacao from './componentes/Saudacao'
 
 //const elemento = <h1> React 2</h1>
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////PAI FILHO
+import Pai from './componentes/Pai'
+
 ReactDOM.render(
     <div>
-        <Saudacao tipo='' nome='' />
+        <Pai nome="Paulo" sobrenome="Silva"/>
     </div>
 , document.getElementById('root'))
-
-
 
 //isso na verdade é um jsx
 //ReactDOM.render(<Bomdia nome='Paulo' idade= '20' />, document.getElementById('root'))
