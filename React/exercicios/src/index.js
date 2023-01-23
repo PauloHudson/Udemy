@@ -3,7 +3,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Primeiro from './componentes/primeiro'
+import Primeiro from './componentes/Primeiro'
+import Bomdia from './componentes/BomDia'
 //posso passar esse elemento com parametro para uma função;;
 
 
@@ -11,6 +12,6 @@ import Primeiro from './componentes/primeiro'
 
 
 //isso na verdade é um jsx
-ReactDOM.render(<Primeiro />, document.getElementById('root'))
+ReactDOM.render(<Bomdia nome='Paulo' idade= '20' />, document.getElementById('root'))
 
 //$('<h1>').html('react 2') algo semelhante ao jquery. s
