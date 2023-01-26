@@ -8,12 +8,37 @@
 </head>
 <body class="exercicio">
     <div id="app">
-
+        <p> {{ 2+2 }}</p>
+        <p> o desconto é de {{desconto}}</p>
+        <p> {{nome }} valor {{preco}} desconto {{desconto}}% = {{preco * desconto - preco}}</p> 
+        <p> Data atual: {{horaCerta()}}</p>
+        <p> Valor com desconto {{precoDesconto}}</p>
     </div>
     <script>
         // ... o trecho de html que será controlado pelo view chamamos de template no caso o app ('área onde o vue manipulará a a Dom')
-        new vue({
-
+        //função new Vue recebe objs como parametro
+        new Vue({
+            el: '#app',
+            //ele é um obj, e podemos referenciar no html diretamente apenas pelo index. (chave)
+            data: {
+                nome: 'caneta',
+                preco: 6.9,
+                desconto: 0.15
+            },
+            //podemos retornar uma function né 
+            //passamos parametros e executamos com a chamada padrão de uma func.
+            methods:{
+                horaCerta(){
+                   return new Date().toLocaleString()
+                }
+            },
+            //como estamos dentro da view distance acessamos data apenas com this.
+            //não precisamos de date.this.preco
+            computed: {
+                precoDesconto(){
+                    return this.preco * (1 - this.desconto) 
+                }
+            }
         })
 
     </script>
