@@ -7,9 +7,35 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+    <div id="app">
+        <p> {{link}}</p>
+        <!-- passar dentro de um href -->
+        <p> <a v-bind:href="link"> será? </a> </p>
+        <!-- OUU simplesmente -->
+        <p> <a :href="link"> principal </a></p>
+        <p>
+            <!-- V-model -->
+            <!-- está acontecendo isso uma vez que o elemento está atuazliando o (obj) data ---- por isso tudo muda... -->
+            <!-- two way database isso... -->
+            <input type="text" v-model="nome"> <br>
+            <span> {{nome}}</span>
+        </p>
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data:{
+                nome: 'maria',
+                link: "https://youtube.com/cod3rcursos"
+            },
+            //essa função watch quando receber alguma atualização de data em cima do nome, ele dispara a função....
+            //podeiramos usar tipo quando clicar em um botão, ele dispara essa função, uma vez que ele funciona quando acontece algo..
+            watch:{
+                nome(novoValor){
+                    console.log(`seu novo nome é ` + this.nome)
+                }
+            }
+        })
     </script>
 </body>
 </html>

@@ -12,6 +12,7 @@
         <p> o desconto é de {{desconto}}</p>
         <p> {{nome }} valor {{preco}} desconto {{desconto}}% = {{preco * desconto - preco}}</p> 
         <p> Data atual: {{horaCerta()}}</p>
+        <!-- não chamamos como função só pelo nome -->
         <p> Valor com desconto {{precoDesconto}}</p>
     </div>
     <script>
@@ -19,7 +20,7 @@
         //função new Vue recebe objs como parametro
         new Vue({
             el: '#app',
-            //ele é um obj, e podemos referenciar no html diretamente apenas pelo index. (chave)
+            //ele é um obj, e podemos referenciar no html diretamente apenas pelo index. (chave) 'qual é o elemento....'
             data: {
                 nome: 'caneta',
                 preco: 6.9,
