@@ -8,11 +8,37 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Gerador de QRCode</title>
 </head>
-
+    <div id="app">
+        <h1> {{ text }} </h1> 
+    </div>
 <body>
-
+<!-- esse Qrious é a lib de criação de QrCode... -->
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Gerador QRCode',
+                text: 'https://cod3r.com.br',
+                qrcode: new QRious({size: 300})
+               
+            },
+            computed: {
+                newQrCode(){
+                    this.qrcode.value = this.text
+                    return this.qrcode.toDataUrl()
+                }
+            },
+            methods: {
+                onData(event){
+                    //on data vai receber evento...
+                    //e alterar o valor do texto.
+                    //um vez o texto alterado ele gera um novo QRcode.
+                    this.text = event.target.value
+                }
+            }
+        })
+
+
     </script>
 </body>
 
