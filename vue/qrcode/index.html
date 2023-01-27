@@ -9,7 +9,17 @@
     <title>Gerador de QRCode</title>
 </head>
     <div id="app">
-        <h1> {{ text }} </h1> 
+        <h1> {{ title }} </h1> 
+        <div>
+            <!-- vai associar ao texto o valor do event, gerar um novo qrcode. -->
+            <input type="text" size="30" placeholder="DigiteParaGerar" :value="text" @input="onData">
+
+        </div>
+        <div v-if="text" class="output">
+            <img :src="newQRCode" alt="QRcode">
+        </div>
+        </div>
+
     </div>
 <body>
 <!-- esse Qrious é a lib de criação de QrCode... -->
@@ -23,9 +33,9 @@
                
             },
             computed: {
-                newQrCode(){
+                newQRCode(){
                     this.qrcode.value = this.text
-                    return this.qrcode.toDataUrl()
+                    return this.qrcode.toDataURL()
                 }
             },
             methods: {
