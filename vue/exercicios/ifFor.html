@@ -11,11 +11,12 @@
         <!-- ele recebe um x no caso coloquei como aluno e o indice. -->
         <p v-for="(aluno, i) in alunos"> 
             {{i+1}}) {{aluno.nome}} - {{aluno.nota}} -
-            
+
             <span v-if="aluno.nota >= 9 " > Quadro de honra</span>
             <span v-else-if="aluno.nota >= 5"> Aprovado </span> 
             <span v-else="aluno.nota"> Reprovado</span>
         </p>
+        <!-- v show deixa display none -->
     </div>
     <script>
         new Vue({
