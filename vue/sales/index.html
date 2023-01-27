@@ -8,11 +8,63 @@
     <title>Relatório de Vendas</title>
 </head>
 
-<body>
+
+<body style="background-color: rgb(241, 241, 241)">
+    <!-- mt é margin top -->
+    <div id="app" style="padding: 0 100px">
+        <h1 class="mt-5" style="text-align: center"> {{title}}</h1> 
+        <table class="mt-5 table">
+            <thead>
+                <tr>
+                    <th> ID</th>
+                    <th> Nome</th>
+                    <th> Preço</th>
+                    <th> Qtde</th>
+                    <th> Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="sale in sales">
+                    <td> {{sale.id }}</td>
+                    <td> {{sale.name }}</td>
+                    <td v-money="'R$'"> {{sale.price }}</td>
+                    <td> {{sale.qtde }}</td>
+                    <td> {{sale.date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script>
-        // ...
-    </script>
-</body>
+        //essa diretiva convert os valores do j.son em Price em padrão monetário...
+        Vue.directive('money', {
+            inserted(el, binding){
+                const amount = parseFloat(el.innerHTML).toFixed(2)
+                    .replace('.', ',')
+                    .replace(/(\d) (?=(\d{3})+\,)/g, '$1.')
+                el.innerHTML = `${binding.value} ${amount}`
+            }
+        })
 
+
+        new Vue({
+            el: '#app',
+            data: {
+                title: "Relatório de Vendas",
+                sales: null
+            },
+            methods: {
+                getSales(){
+                    fetch('/data/sales.json')
+                        .then(resp => resp.json())
+                        .then(data => this.sales = data )
+                }
+            },
+            //será chamada quando a view distance gerar um template. 
+            mounted(){
+                this.getSales()
+            }
+        })
+    </script>
+</body> 
 </html>
