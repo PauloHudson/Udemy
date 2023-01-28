@@ -1,48 +1,41 @@
 <template>
     <div id="app">
-        <h1> Olá Mundo</h1>
-        <Calculator/>
+        <h1>Calculadora</h1>
+        <Calculator />
     </div>
 </template>
 
 <script>
-
-import Calculator from './main/Calculator'
+import Calculator from "./main/Calculator"
 
 export default {
-    components: {Calculator}
+    components: { Calculator }
 }
 </script>
 
 <style>
-
-@font-face{
+@font-face {
     font-family: "Poppins";
     src: url("./fonts/Poppins-Thin.ttf");
 }
 
-*{
-    font-family: "Poppins";
-
+* {
+    font-family: "Poppins", monospace;
 }
-body{
+
+body {
     margin: 0;
-
 }
-#app{
+
+#app {
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    text-align: center;
 
     color: #fff;
-    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
 }
-h1{
-    font-size: 3vh;
-    text-transform: uppercase;
-}
-
 </style>
