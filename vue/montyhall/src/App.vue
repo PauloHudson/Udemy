@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <h1> Problema de MontyHall </h1>
-    <Gift />
+    <!-- atentar poís aqui estamos passando um boolean, por isso precisamos colocar : -->
+    <!-- se não ele retornaria uma string -- e uma string vázia retoranria True. -->
+    <Door number='1' :hasGift="false"/>
   </div>
 </template>
 
 <script>
 
-import Gift from './components/GiftValue'
+import Door from './components/Door'
 
 export default {
     name: 'App',
-    components: {Gift}
+    components: {Door}
 }
 </script>
 
