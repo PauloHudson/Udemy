@@ -36,6 +36,6 @@ body {
     text-align: center;
 
     color: #fff;
-    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
+    background: linear-gradient(to right, rgb(42, 122, 168), rgb(19, 169, 228));
 }
 </style>
