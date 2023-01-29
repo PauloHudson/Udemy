@@ -57,7 +57,7 @@ body {
 }
 
 #app h1 {
-    border-radius: 40px;
+    border-radius: 42px;
     background-color: #0004;
     padding: 20px;
     margin-bottom: 60px;
