@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS cidades(
+    id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    estado_id int UNSIGNED NOT NULL,
+    area DECIMAL(10,2),
+    FOREIGN KEY (estado_id) REFERENCES estados (id)
+);
