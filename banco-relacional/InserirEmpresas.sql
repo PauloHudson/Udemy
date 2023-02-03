@@ -23,3 +23,6 @@ values
     (2, 2, 1)
 
 desc empresas_undidades;
+select * from empresas_undidades;
+select * from empresas;
+select * from cidades;

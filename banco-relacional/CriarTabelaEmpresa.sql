@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS empresas(
 CREATE TABLE IF NOT EXISTS empresas_undidades(
     empresa_id int unsigned not null,
     cidade_id int unsigned not null,
-    sede TYNYINT(1) not null,
+    sede int not null,
     primary key(empresa_id, cidade_id)
 );
