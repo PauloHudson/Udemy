@@ -15,4 +15,4 @@ db.estados.find().skip(1).limit(2).
 db.estados.count()
 //filtrar a sigla sp e o nome...
 db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0})
-db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})
+db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})x
