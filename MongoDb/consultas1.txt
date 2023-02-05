@@ -10,7 +10,7 @@ db.estados.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}).pretty()
 //está contido ou nãoooo, se existir ele retorna... {no caso quem tiver a populacao}
 db.estados.find({populacao: {$exists: true}}).pretty()
 //pular o primeiro, e só vai exibir apenas 2
-db.estados.find().skip(1).limit(2)
+db.estados.find().skip(1).limit(2).
 //quantos registros...
 db.estados.count()
 //filtrar a sigla sp e o nome...
