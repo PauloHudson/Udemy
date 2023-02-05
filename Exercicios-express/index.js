@@ -6,7 +6,7 @@ const usuarioApi = require('./api/usuario')
 //qualquer requisição vai ser usado pela função use kk
 //poderiamos colocar tipo localhost:3000/euteamofdp que iria kk
 // app.use('/opa'req, res) isso funcionaria, daí só /opa funcionaria..
-//use qualquer requisição iria... ou ALL
+//use qualquer rquisição iria... ou ALL
 //tmeos de passar o param...
 app.get('/usuario', usuarioApi.salvar)
 app.post('./usuario', usuarioApi.obter)
