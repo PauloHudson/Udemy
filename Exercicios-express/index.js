@@ -7,7 +7,7 @@ const usuarioApi = require('./api/usuario')
 //poderiamos colocar tipo localhost:3000/euteamofdp que iria kk
 // app.use('/opa'req, res) isso funcionaria, daí só /opa funcionaria..
 //use qualquer rquisição iria... ou ALL
-//tmeos de passar o param...
+//tmeos de passadr o param...
 app.get('/usuario', usuarioApi.salvar)
 app.post('./usuario', usuarioApi.obter)
 
